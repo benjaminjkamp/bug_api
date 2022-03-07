@@ -1,0 +1,6 @@
+{
+  id: @user.id,
+  char_name: @user.char_name,
+  input: @user.email,
+  admin?: @user.admin
+}

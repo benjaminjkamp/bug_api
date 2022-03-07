@@ -1,0 +1,28 @@
+@issues.map do |issue|
+  {
+    id: issue.id,
+    app_id: issue.id,
+    type: issue.type,
+    severity: issue.severity,
+    summary: issue.summary,
+    description: issue.description,
+    time: issue.time,
+    char_name: issue.char_name,
+    impact: issue.impact,
+    category: issue.category,
+    internal: issue.internal,
+    status: issue.status,
+    location: issue.location_id,
+
+    submitter: {
+      char_name: issue.users[0].char_name,
+      email: issue.users[0].email
+    },
+
+    owner: {
+      char_name: issue.users[1].char_name,
+      email: issue.users[1].email
+    }
+  }
+  
+end
